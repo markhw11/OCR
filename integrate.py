@@ -638,10 +638,10 @@ class FixedMedicalOCR:
 def main():
     config = {
         "llama_model_name": "elenamagdy77/Finetune_Llama_3_2_Vision_OCR",
-        "google_api_key": "AIzaSyDLePMB53Q1Nud4ZG8a2XA9UUYuSLCrY6c",
-        "openai_api_key": "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",
-        "medicine_csv_path": "/notebooks/eda_medicines_cleaned.csv",
-        "dosage_json_path": "/notebooks/Deployment/medical_products_full.json"
+        "google_api_key": os.getenv("GOOGLE_API_KEY"),
+        "openai_api_key": os.getenv("OPENAI_API_KEY"),
+        "medicine_csv_path": os.getenv("MEDICINE_DATASET_PATH"),
+        "dosage_json_path": os.getenv("DOSAGE_JSON_PATH")
     }
     
     
