@@ -42,8 +42,6 @@ ENV PORT 8000
 
 EXPOSE ${PORT}
 
-# If you keep your big JSON zipped, unzip here once at build-time
-RUN unzip -q data/medical_products_full.zip -d data/ && rm data/medical_products_full.zip
 
 # Gunicorn is optional; Uvicorn is fine for smaller workloads
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "${PORT}"]
