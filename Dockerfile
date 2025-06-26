@@ -44,4 +44,4 @@ EXPOSE ${PORT}
 
 
 # Gunicorn is optional; Uvicorn is fine for smaller workloads
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "${PORT}"]
+CMD uvicorn app:app --host 0.0.0.0 --port ${PORT:-8000}
