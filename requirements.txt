@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pillow
+torch
+transformers
+pydantic
+scikit-learn
+pandas
+openai
+unsloth
+python-dotenv
+requests
