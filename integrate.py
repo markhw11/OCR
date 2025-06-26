@@ -43,7 +43,8 @@ class FixedMedicalOCR:
         if openai_api_key:
             try:
                 import openai
-                self.openai_client = openai.OpenAI(api_key=openai_api_key)
+                openai.api_key = openai_api_key
+                self.openai_client = openai
                 print("✅ OpenAI client initialized")
             except ImportError:
                 print("⚠️ OpenAI not available")
