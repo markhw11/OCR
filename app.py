@@ -4,6 +4,15 @@ import os
 import tempfile
 import json
 from main import IntegratedMedicalOCR
+import zipfile
+
+# Unzip the medical JSON if not already extracted
+json_path = "data/medical_products_full.json"
+zip_path = "data/medical_products_full.json.zip"
+
+if not os.path.exists(json_path) and os.path.exists(zip_path):
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall("data/")
 
 from dotenv import load_dotenv
 load_dotenv()
